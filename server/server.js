@@ -1,5 +1,4 @@
 var express = require('express')
-const { body, validationResult } = require("express-validator");
 var app = express()
 var morgen = require('morgan')
 const { EmbedBuilder, WebhookClient, Embed } = require('discord.js');
@@ -30,6 +29,6 @@ app.post('/idear.html', function(req, res){
     res.sendFile(__dirname + "/idear.html")
 });
 
-app.listen(7000, function(req, res) {
-    console.log('Listening on port 7000')
+app.listen(8000, function(req, res) {
+    console.log('Listening on port 8000')
 });
