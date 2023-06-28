@@ -5,3 +5,4 @@ npm i express
 npm i discord.js
 npm run start
 ```
+## how to connect
