@@ -9,14 +9,15 @@ app.use(express.urlencoded({
     extended: true
 }));
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html')
 })
-app.post('/idear.html', function(req, res){
+app.post('/idear', function(req, res){
     const embed = new EmbedBuilder()
     .setTitle('idear.zelcrux.net')
     .setColor(0x00FFFF)
     .addFields(
+    {Name: "name", value: req.body.ni},
     {name: "idear", value: req.body.input}
     )
 
